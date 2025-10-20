@@ -1,0 +1,64 @@
+﻿@page "/posts"
+@using Shared.Model
+@using BlazorApp.Services
+@using BlazorApp.Component
+@inject ApiService Api
+
+<h3>Kreddit – Forside</h3>
+
+@if (posts == null)
+{
+    <p><em>Indlæser indlæg...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Forfatter</th>
+            <th>Stemmer</th>
+            <th colspan="2">Handling</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var post in posts)
+        {
+            <tr>
+                <td><a href="/post/@post.PostId">@post.Title</a></td>
+                <td>@post.Author</td>
+                <td>@(post.Upvotes - post.Downvotes)</td>
+                <td><button @onclick="() => Upvote(post.PostId)">👍</button></td>
+                <td><button @onclick="() => Downvote(post.PostId)">👎</button></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+<CreatePost OnPostCreated="LoadPosts"></CreatePost>
+
+@code {
+    private Post[] posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await Api.GetPosts();
+    }
+
+    private async Task Upvote(int id)
+    {
+        await Api.UpvotePost(id);
+        posts = await Api.GetPosts();
+    }
+
+    private async Task Downvote(int id)
+    {
+        await Api.DownvotePost(id);
+        posts = await Api.GetPosts();
+    }
+    private async Task LoadPosts()
+    {
+        posts = await Api.GetPosts();
+    }
+
+}

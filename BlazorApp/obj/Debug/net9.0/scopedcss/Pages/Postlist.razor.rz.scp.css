@@ -1,0 +1,52 @@
+h3[b-pvz134pgry] {
+    margin-bottom: 20px;
+    color: #452d3d;
+}
+
+table[b-pvz134pgry] {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th[b-pvz134pgry], td[b-pvz134pgry] {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th[b-pvz134pgry] {
+    background-color: #452d3d;
+    color: white;
+    text-align: left;
+}
+
+td a[b-pvz134pgry] {
+    color: #452d3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover[b-pvz134pgry] {
+    text-decoration: underline;
+}
+
+button[b-pvz134pgry] {
+    border: none;
+    background-color: #452d3d;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover[b-pvz134pgry] {
+    background-color: #65425e;
+}
+
+tr:nth-child(even)[b-pvz134pgry] {
+    background-color: #f2f0eb;
+}

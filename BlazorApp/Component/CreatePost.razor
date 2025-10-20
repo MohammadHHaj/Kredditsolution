@@ -1,0 +1,40 @@
+@using BlazorApp.Services
+@inject ApiService Api
+
+<div style="margin-top:20px;">
+    <h4>Opret nyt opslag</h4>
+    <input @bind="title" placeholder="Titel.." style="width:100%; padding:6px;" />
+    <input @bind="author" placeholder="Dit navn.." style="width:100%; padding:6px; margin-top:5px;" />
+    <button @onclick="CreateNewPost" style="margin-top:8px;">Opret opslag</button>
+
+    @if (!string.IsNullOrEmpty(statusMessage))
+    {
+        <p>@statusMessage</p>
+    }
+</div>
+
+@code {
+    private string title = "";
+    private string author = "";
+    private string? statusMessage;
+
+    [Parameter] public EventCallback OnPostCreated { get; set; }
+
+    private async Task CreateNewPost()
+    {
+        if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(author))
+        {
+            statusMessage = "Udfyld begge felter.";
+            return;
+        }
+
+        await Api.CreatePost(title, author);
+        statusMessage = "Post oprettet!";
+
+        title = "";
+        author = "";
+
+        if (OnPostCreated.HasDelegate)
+            await OnPostCreated.InvokeAsync();
+    }
+}

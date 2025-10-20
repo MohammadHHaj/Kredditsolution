@@ -1,0 +1,93 @@
+﻿@page "/post/{id:int}"
+@using Shared.Model
+@using BlazorApp.Component
+@using BlazorApp.Services
+@inject ApiService Api
+@inject NavigationManager NavManager
+
+@if (Post == null)
+{
+    <p><em>Indlæser indlæg...</em></p>
+}
+else
+{
+    <button class="back-button" @onclick="GoBack">⬅ Tilbage</button>
+
+    <div class="contents">
+        <h3>@Post.Title</h3>
+        <p><b>Forfatter:</b> @Post.Author</p>
+        <p><b>Stemmer:</b> @(Post.Upvotes - Post.Downvotes)</p>
+        <p><i>Oprettet:</i> @Post.Date?.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p>
+    </div>
+
+    <div class="contents">
+        <h4>KOMMENTARER</h4>
+        @if (Post.Comments == null || Post.Comments.Count == 0)
+        {
+            <p><em>Ingen kommentarer endnu</em></p>
+        }
+        else
+        {
+            <table>
+                <tr>
+                    <th>Forfatter</th>
+                    <th>Kommentar</th>
+                    <th>Stemmer</th>
+                    <th>Dato</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach (var c in Post.Comments)
+                {
+                    <tr>
+                        <td>@c.Author</td>
+                        <td>@c.Text</td>
+                        <td>@(c.Upvotes - c.Downvotes)</td>
+                        <td>@c.Date.ToLocalTime().ToString("dd/MM/yyyy")</td>
+                        <td><button @onclick="() => UpvoteComment(c.CommentId)">👍</button></td>
+                        <td><button @onclick="() => DownvoteComment(c.CommentId)">👎</button></td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+}
+
+<CreateComment PostId="@id" OnCommentAdded="LoadPost" />
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Post? Post;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadPost();
+    }
+    private void GoBack()
+    { 
+        NavManager.NavigateTo("/posts");
+    }
+    private async Task UpvoteComment(int commentId)
+    {
+        await Api.UpvoteComment(id, commentId);
+        await LoadPost();
+    }
+
+    private async Task DownvoteComment(int commentId)
+    {
+        await Api.DownvoteCommentAsync(id, commentId);
+        await LoadPost();
+    }
+
+    private async Task LoadPost()
+    {
+        Post = await Api.GetPostAsync(id);
+
+        if (Post?.Comments != null)
+        {
+            Post.Comments = Post.Comments
+                .OrderByDescending(c => c.Date)
+                .ToList();
+        }
+    }
+}

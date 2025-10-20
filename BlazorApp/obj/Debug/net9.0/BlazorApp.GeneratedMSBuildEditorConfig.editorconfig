@@ -1,0 +1,57 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BlazorApp
+build_property.RootNamespace = BlazorApp
+build_property.ProjectDir = /Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/Component/CreateComment.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50L0NyZWF0ZUNvbW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/Component/CreatePost.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50L0NyZWF0ZVBvc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vxqp76xmab
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ofipnc72hp
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/Pages/Postitem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUG9zdGl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-dgjodn4k18
+
+[/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/Pages/Postlist.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUG9zdGxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-pvz134pgry
