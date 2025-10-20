@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/Shared.csproj": {}
+    "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/Shared.csproj": {
+    "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/Shared.csproj",
-        "packagesPath": "/Users/mohammadhaj/.nuget/packages/",
-        "outputPath": "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/obj/",
+        "projectPath": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Mohammad Haj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mohammadhaj/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Mohammad Haj\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

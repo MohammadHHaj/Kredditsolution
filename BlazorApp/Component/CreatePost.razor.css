@@ -1,0 +1,63 @@
+﻿.create-post-container {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-container h4 {
+    margin-bottom: 12px;
+    color: #452d3d;
+}
+
+.create-post-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.create-post-container input:focus {
+    outline: 2px solid #452d3d;
+}
+
+.create-post-container button {
+    background-color: #452d3d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.create-post-container button:hover {
+    background-color: #5d3c53;
+    transform: scale(1.03);
+}
+
+.status-message {
+    margin-top: 8px;
+    color: #555;
+    font-style: italic;
+}
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+}

@@ -4,7 +4,8 @@
 @using BlazorApp.Component
 @inject ApiService Api
 
-<h3>Kreddit – Forside</h3>
+<div class="page-container">
+    <h3>Kreddit – Forside</h3>
 
 @if (posts == null)
 {
@@ -34,9 +35,11 @@ else
         }
         </tbody>
     </table>
-}
+} 
+<div class="create-post-box">
 <CreatePost OnPostCreated="LoadPosts"></CreatePost>
-
+</div>
+</div>
 @code {
     private Post[] posts;
 

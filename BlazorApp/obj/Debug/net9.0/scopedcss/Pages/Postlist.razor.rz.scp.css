@@ -1,52 +1,102 @@
-h3[b-pvz134pgry] {
-    margin-bottom: 20px;
-    color: #452d3d;
+/* ---------- Layout ---------- */
+.page-container[b-6t6esghq8x] {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-table[b-pvz134pgry] {
+/* ---------- Titel ---------- */
+h3[b-6t6esghq8x] {
+    margin-bottom: 20px;
+    color: #452d3d;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 2px solid #452d3d;
+    padding-bottom: 5px;
+}
+
+/* ---------- Tabelle ---------- */
+table[b-6t6esghq8x] {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 6px;
+    background-color: white;
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px;
 }
 
-th[b-pvz134pgry], td[b-pvz134pgry] {
-    padding: 10px 12px;
-    border-bottom: 1px solid #ddd;
+th[b-6t6esghq8x], td[b-6t6esghq8x] {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e2e2;
 }
 
-th[b-pvz134pgry] {
+th[b-6t6esghq8x] {
     background-color: #452d3d;
     color: white;
     text-align: left;
+    font-size: 15px;
 }
 
-td a[b-pvz134pgry] {
+td a[b-6t6esghq8x] {
     color: #452d3d;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
 }
 
-td a:hover[b-pvz134pgry] {
+td a:hover[b-6t6esghq8x] {
     text-decoration: underline;
 }
 
-button[b-pvz134pgry] {
+tr:nth-child(even)[b-6t6esghq8x] {
+    background-color: #f7f5f4;
+}
+
+tr:hover[b-6t6esghq8x] {
+    background-color: #ede8e6;
+}
+
+/* ---------- Knapper ---------- */
+button[b-6t6esghq8x] {
     border: none;
     background-color: #452d3d;
     color: white;
-    padding: 6px 10px;
-    border-radius: 4px;
+    padding: 8px 12px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
-button:hover[b-pvz134pgry] {
-    background-color: #65425e;
+button:hover[b-6t6esghq8x] {
+    background-color: #5d3c53;
+    transform: scale(1.05);
 }
 
-tr:nth-child(even)[b-pvz134pgry] {
-    background-color: #f2f0eb;
+/* ---------- Opret Post Sektion ---------- */
+.create-post-box[b-6t6esghq8x] {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+}
+
+.create-post-box h4[b-6t6esghq8x] {
+    color: #452d3d;
+    margin-bottom: 12px;
+}
+
+input[type="text"][b-6t6esghq8x] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus[b-6t6esghq8x] {
+    outline: 2px solid #452d3d;
 }

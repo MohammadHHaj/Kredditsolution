@@ -1,10 +1,11 @@
-div.contents {
+.contents {
     background-color: #f2f0eb;
     width: 600px;
     border: 2px solid #452d3d;
     padding: 10px;
     margin-top: 20px;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 table {
@@ -33,6 +34,7 @@ button {
 button:hover {
     background-color: #65425e;
 }
+
 .back-button {
     background-color: #452d3d;
     color: white;

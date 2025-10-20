@@ -3852,19 +3852,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/mohammadhaj/.nuget/packages/": {}
+    "C:\\Users\\Mohammad Haj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mohammadhaj/RiderProjects/KredditSolution/WebApi/WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "/Users/mohammadhaj/RiderProjects/KredditSolution/WebApi/WebApi.csproj",
-      "packagesPath": "/Users/mohammadhaj/.nuget/packages/",
-      "outputPath": "/Users/mohammadhaj/RiderProjects/KredditSolution/WebApi/obj/",
+      "projectPath": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\WebApi\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\Mohammad Haj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/mohammadhaj/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Mohammad Haj\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -3876,11 +3876,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/BlazorApp.csproj": {
-              "projectPath": "/Users/mohammadhaj/RiderProjects/KredditSolution/BlazorApp/BlazorApp.csproj"
+            "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\BlazorApp\\BlazorApp.csproj": {
+              "projectPath": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\BlazorApp\\BlazorApp.csproj"
             },
-            "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/Shared.csproj": {
-              "projectPath": "/Users/mohammadhaj/RiderProjects/KredditSolution/Shared/Shared.csproj"
+            "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Mohammad Haj\\RiderProjects\\Kredditsolution\\Shared\\Shared.csproj"
             }
           }
         }
@@ -3895,7 +3895,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -3939,7 +3939,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -2,23 +2,17 @@
 @using Shared.Model
 @inject ApiService Api
 
-<div style="margin-top:20px;">
+<div class="create-post-container">
     <h4>Skriv en kommentar</h4>
 
-    <input @bind="author"
-           placeholder="Dit navn"
-           style="width:100%; padding:6px; border-radius:5px; border:1px solid #ccc; margin-bottom:6px;" />
+    <input @bind="author" placeholder="Dit navn..." />
+    <textarea @bind="content" placeholder="Din kommentar..."></textarea>
 
-    <textarea @bind="content"
-              placeholder="Din kommentar..."
-              style="width:100%; padding:6px; border-radius:5px; border:1px solid #ccc; height:80px;"></textarea>
-
-    <button @onclick="CreateNewComment"
-            style="margin-top:8px; padding:6px 12px;">Kommentér</button>
+    <button @onclick="CreateNewComment">Kommentér</button>
 
     @if (!string.IsNullOrEmpty(statusMessage))
     {
-        <p style="color:gray; font-size:0.9em;">@statusMessage</p>
+        <p class="@statusClass">@statusMessage</p>
     }
 </div>
 
@@ -29,21 +23,24 @@
     private string author = string.Empty;
     private string content = string.Empty;
     private string? statusMessage;
+    private string? statusClass;
 
     private async Task CreateNewComment()
     {
         if (string.IsNullOrWhiteSpace(author) || string.IsNullOrWhiteSpace(content))
         {
             statusMessage = "Udfyld både navn og kommentar!";
+            statusClass = "error-message";
             return;
         }
 
-        // Brug ApiService til at oprette kommentaren
         Post? updatedPost = await Api.AddComment(PostId, content, author);
 
         if (updatedPost != null)
         {
             statusMessage = "Kommentar tilføjet!";
+            statusClass = "success-message";
+
             content = string.Empty;
             author = string.Empty;
 
@@ -53,6 +50,7 @@
         else
         {
             statusMessage = "Kunne ikke tilføje kommentaren.";
+            statusClass = "error-message";
         }
     }
 }

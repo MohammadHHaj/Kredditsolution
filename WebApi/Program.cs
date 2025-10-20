@@ -49,10 +49,16 @@ app.UseCors(AllowBlazor);
 // ---------- API ENDPOINTS ----------
 
 // Hent alle posts
+// Hent max 50 nyeste posts
 app.MapGet("/api/posts", (Dataservice service) =>
 {
-    return Results.Ok(service.GetPosts());
+    return Results.Ok(
+        service.GetPosts()
+            .OrderByDescending(p => p.Date) // sorter efter nyeste
+            .Take(50)                       // maks 50 posts
+    );
 });
+
 
 // Hent ét post
 app.MapGet("/api/posts/{id}", (Dataservice service, int id) =>

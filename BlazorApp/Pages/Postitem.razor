@@ -29,31 +29,37 @@ else
         else
         {
             <table>
-                <tr>
-                    <th>Forfatter</th>
-                    <th>Kommentar</th>
-                    <th>Stemmer</th>
-                    <th>Dato</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                @foreach (var c in Post.Comments)
-                {
+                <thead>
                     <tr>
-                        <td>@c.Author</td>
-                        <td>@c.Text</td>
-                        <td>@(c.Upvotes - c.Downvotes)</td>
-                        <td>@c.Date.ToLocalTime().ToString("dd/MM/yyyy")</td>
-                        <td><button @onclick="() => UpvoteComment(c.CommentId)">👍</button></td>
-                        <td><button @onclick="() => DownvoteComment(c.CommentId)">👎</button></td>
+                        <th>Forfatter</th>
+                        <th>Kommentar</th>
+                        <th>Stemmer</th>
+                        <th>Dato</th>
+                        <th></th>
+                        <th></th>
                     </tr>
-                }
+                </thead>
+                <tbody>
+                    @foreach (var c in Post.Comments)
+                    {
+                        <tr>
+                            <td>@c.Author</td>
+                            <td>@c.Text</td>
+                            <td>@(c.Upvotes - c.Downvotes)</td>
+                            <td>@c.Date.ToLocalTime().ToString("dd/MM/yyyy")</td>
+                            <td><button @onclick="() => UpvoteComment(c.CommentId)">👍</button></td>
+                            <td><button @onclick="() => DownvoteComment(c.CommentId)">👎</button></td>
+                        </tr>
+                    }
+                </tbody>
             </table>
         }
     </div>
-}
 
-<CreateComment PostId="@id" OnCommentAdded="LoadPost" />
+    <div class="contents">
+        <CreateComment PostId="@id" OnCommentAdded="LoadPost" />
+    </div>
+}
 
 @code {
     [Parameter] public int id { get; set; }
@@ -63,10 +69,12 @@ else
     {
         await LoadPost();
     }
+
     private void GoBack()
-    { 
+    {
         NavManager.NavigateTo("/posts");
     }
+
     private async Task UpvoteComment(int commentId)
     {
         await Api.UpvoteComment(id, commentId);
