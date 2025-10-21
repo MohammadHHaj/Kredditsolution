@@ -1,5 +1,5 @@
 /* ---------- Layout ---------- */
-.page-container[b-6t6esghq8x] {
+.page-container[b-pvz134pgry] {
     max-width: 900px;
     margin: auto;
     padding: 20px;
@@ -7,7 +7,7 @@
 }
 
 /* ---------- Titel ---------- */
-h3[b-6t6esghq8x] {
+h3[b-pvz134pgry] {
     margin-bottom: 20px;
     color: #452d3d;
     font-size: 28px;
@@ -17,7 +17,7 @@ h3[b-6t6esghq8x] {
 }
 
 /* ---------- Tabelle ---------- */
-table[b-6t6esghq8x] {
+table[b-pvz134pgry] {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
@@ -27,38 +27,38 @@ table[b-6t6esghq8x] {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px;
 }
 
-th[b-6t6esghq8x], td[b-6t6esghq8x] {
+th[b-pvz134pgry], td[b-pvz134pgry] {
     padding: 12px 15px;
     border-bottom: 1px solid #e2e2e2;
 }
 
-th[b-6t6esghq8x] {
+th[b-pvz134pgry] {
     background-color: #452d3d;
     color: white;
     text-align: left;
     font-size: 15px;
 }
 
-td a[b-6t6esghq8x] {
+td a[b-pvz134pgry] {
     color: #452d3d;
     font-weight: 600;
     text-decoration: none;
 }
 
-td a:hover[b-6t6esghq8x] {
+td a:hover[b-pvz134pgry] {
     text-decoration: underline;
 }
 
-tr:nth-child(even)[b-6t6esghq8x] {
+tr:nth-child(even)[b-pvz134pgry] {
     background-color: #f7f5f4;
 }
 
-tr:hover[b-6t6esghq8x] {
+tr:hover[b-pvz134pgry] {
     background-color: #ede8e6;
 }
 
 /* ---------- Knapper ---------- */
-button[b-6t6esghq8x] {
+button[b-pvz134pgry] {
     border: none;
     background-color: #452d3d;
     color: white;
@@ -69,13 +69,13 @@ button[b-6t6esghq8x] {
     transition: 0.2s;
 }
 
-button:hover[b-6t6esghq8x] {
+button:hover[b-pvz134pgry] {
     background-color: #5d3c53;
     transform: scale(1.05);
 }
 
 /* ---------- Opret Post Sektion ---------- */
-.create-post-box[b-6t6esghq8x] {
+.create-post-box[b-pvz134pgry] {
     margin-top: 30px;
     padding: 15px;
     background-color: white;
@@ -83,12 +83,12 @@ button:hover[b-6t6esghq8x] {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 }
 
-.create-post-box h4[b-6t6esghq8x] {
+.create-post-box h4[b-pvz134pgry] {
     color: #452d3d;
     margin-bottom: 12px;
 }
 
-input[type="text"][b-6t6esghq8x] {
+input[type="text"][b-pvz134pgry] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -97,6 +97,6 @@ input[type="text"][b-6t6esghq8x] {
     font-size: 14px;
 }
 
-input[type="text"]:focus[b-6t6esghq8x] {
+input[type="text"]:focus[b-pvz134pgry] {
     outline: 2px solid #452d3d;
 }

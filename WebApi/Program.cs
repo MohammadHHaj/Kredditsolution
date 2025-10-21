@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// JSON håndtering uden reference loops
+// JSON håndtering uden loops
 builder.Services.Configure<JsonOptions>(options =>
 {
     options.SerializerOptions.ReferenceHandler =
