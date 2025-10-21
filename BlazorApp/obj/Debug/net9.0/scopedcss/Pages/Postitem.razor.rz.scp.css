@@ -1,50 +1,104 @@
-.contents[b-dgjodn4k18] {
-    background-color: #f2f0eb;
-    width: 600px;
-    border: 2px solid #452d3d;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
+/* ---------- Side-layout ---------- */
+.page-wrapper[b-rmm0hvd1rw] {
+    max-width: 900px;
+    margin: 0 auto; /* centrerer alt */
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-table[b-dgjodn4k18] {
+/* ---------- Indholdsbokse ---------- */
+.contents[b-rmm0hvd1rw] {
+    background-color: #f2f0eb;
+    width: 100%;
+    border: 2px solid #452d3d;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px;
+}
+
+/* ---------- Overskrifter ---------- */
+h3[b-rmm0hvd1rw], h4[b-rmm0hvd1rw] {
+    color: #452d3d;
+    margin-bottom: 12px;
+}
+
+/* ---------- Kommentar-tabel ---------- */
+table[b-rmm0hvd1rw] {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 4px;
 }
 
-th[b-dgjodn4k18], td[b-dgjodn4k18] {
-    border-bottom: 1px solid #ccc;
-    padding: 6px;
+th[b-rmm0hvd1rw], td[b-rmm0hvd1rw] {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 15px;
 }
 
-th[b-dgjodn4k18] {
+th[b-rmm0hvd1rw] {
+    background-color: #452d3d;
+    color: white;
     text-align: left;
 }
 
-button[b-dgjodn4k18] {
+/* ---------- Knapper ---------- */
+button[b-rmm0hvd1rw] {
     border: none;
     background-color: #452d3d;
     color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 6px 10px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
-button:hover[b-dgjodn4k18] {
-    background-color: #65425e;
+button:hover[b-rmm0hvd1rw] {
+    background-color: #5d3c53;
+    transform: scale(1.05);
 }
 
-.back-button[b-dgjodn4k18] {
-    background-color: #452d3d;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+/* ---------- Tilbage-knap ---------- */
+.back-button[b-rmm0hvd1rw] {
+    display: inline-block;
     margin-bottom: 15px;
+    background-color: #452d3d;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.back-button:hover[b-dgjodn4k18] {
-    background-color: #65425e;
+.back-button:hover[b-rmm0hvd1rw] {
+    background-color: #5d3c53;
+    transform: scale(1.05);
+}
+
+/* ---------- Responsive design ---------- */
+@media (max-width: 768px) {
+    .page-wrapper[b-rmm0hvd1rw] {
+        padding: 15px;
+    }
+
+    .contents[b-rmm0hvd1rw] {
+        padding: 12px;
+    }
+
+    th[b-rmm0hvd1rw], td[b-rmm0hvd1rw] {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button[b-rmm0hvd1rw] {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
 }

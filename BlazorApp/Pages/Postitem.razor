@@ -11,53 +11,55 @@
 }
 else
 {
-    <button class="back-button" @onclick="GoBack">⬅ Tilbage</button>
+    <div class="page-wrapper">
+        <button class="back-button" @onclick="GoBack">⬅ Tilbage</button>
 
-    <div class="contents">
-        <h3>@Post.Title</h3>
-        <p><b>Forfatter:</b> @Post.Author</p>
-        <p><b>Stemmer:</b> @(Post.Upvotes - Post.Downvotes)</p>
-        <p><i>Oprettet:</i> @Post.Date?.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p>
-    </div>
+        <div class="contents">
+            <h3>@Post.Title</h3>
+            <p><b>Forfatter:</b> @Post.Author</p>
+            <p><b>Stemmer:</b> @(Post.Upvotes - Post.Downvotes)</p>
+            <p><i>Oprettet:</i> @Post.Date?.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p>
+        </div>
 
-    <div class="contents">
-        <h4>KOMMENTARER</h4>
-        @if (Post.Comments == null || Post.Comments.Count == 0)
-        {
-            <p><em>Ingen kommentarer endnu</em></p>
-        }
-        else
-        {
-            <table>
-                <thead>
-                    <tr>
-                        <th>Forfatter</th>
-                        <th>Kommentar</th>
-                        <th>Stemmer</th>
-                        <th>Dato</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var c in Post.Comments)
-                    {
+        <div class="contents">
+            <h4>KOMMENTARER</h4>
+            @if (Post.Comments == null || Post.Comments.Count == 0)
+            {
+                <p><em>Ingen kommentarer endnu</em></p>
+            }
+            else
+            {
+                <table>
+                    <thead>
                         <tr>
-                            <td>@c.Author</td>
-                            <td>@c.Text</td>
-                            <td>@(c.Upvotes - c.Downvotes)</td>
-                            <td>@c.Date.ToLocalTime().ToString("dd/MM/yyyy")</td>
-                            <td><button @onclick="() => UpvoteComment(c.CommentId)">👍</button></td>
-                            <td><button @onclick="() => DownvoteComment(c.CommentId)">👎</button></td>
+                            <th>Forfatter</th>
+                            <th>Kommentar</th>
+                            <th>Stemmer</th>
+                            <th>Dato</th>
+                            <th></th>
+                            <th></th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-        }
-    </div>
+                    </thead>
+                    <tbody>
+                        @foreach (var c in Post.Comments)
+                        {
+                            <tr>
+                                <td>@c.Author</td>
+                                <td>@c.Text</td>
+                                <td>@(c.Upvotes - c.Downvotes)</td>
+                                <td>@c.Date.ToLocalTime().ToString("dd/MM/yyyy")</td>
+                                <td><button @onclick="() => UpvoteComment(c.CommentId)">👍</button></td>
+                                <td><button @onclick="() => DownvoteComment(c.CommentId)">👎</button></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
 
-    <div class="contents">
-        <CreateComment PostId="@id" OnCommentAdded="LoadPost" />
+        <div class="contents">
+            <CreateComment PostId="@id" OnCommentAdded="LoadPost" />
+        </div>
     </div>
 }
 

@@ -1,50 +1,104 @@
-.contents {
-    background-color: #f2f0eb;
-    width: 600px;
-    border: 2px solid #452d3d;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
+/* ---------- Side-layout ---------- */
+.page-wrapper {
+    max-width: 900px;
+    margin: 0 auto; /* centrerer alt */
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ---------- Indholdsbokse ---------- */
+.contents {
+    background-color: #f2f0eb;
+    width: 100%;
+    border: 2px solid #452d3d;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px;
+}
+
+/* ---------- Overskrifter ---------- */
+h3, h4 {
+    color: #452d3d;
+    margin-bottom: 12px;
+}
+
+/* ---------- Kommentar-tabel ---------- */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 4px;
 }
 
 th, td {
-    border-bottom: 1px solid #ccc;
-    padding: 6px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 15px;
 }
 
 th {
+    background-color: #452d3d;
+    color: white;
     text-align: left;
 }
 
+/* ---------- Knapper ---------- */
 button {
     border: none;
     background-color: #452d3d;
     color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 6px 10px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #65425e;
+    background-color: #5d3c53;
+    transform: scale(1.05);
 }
 
+/* ---------- Tilbage-knap ---------- */
 .back-button {
+    display: inline-block;
+    margin-bottom: 15px;
     background-color: #452d3d;
     color: white;
-    border: none;
     padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
-    margin-bottom: 15px;
+    transition: 0.2s;
 }
 
 .back-button:hover {
-    background-color: #65425e;
+    background-color: #5d3c53;
+    transform: scale(1.05);
+}
+
+/* ---------- Responsive design ---------- */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 15px;
+    }
+
+    .contents {
+        padding: 12px;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 5px 8px;
+        font-size: 13px;
+    }
 }
